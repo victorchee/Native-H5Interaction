@@ -10,7 +10,8 @@ import UIKit
 import JavaScriptCore
 
 @objc protocol TestJSExports: JSExport {
-    func JSCallNative()
+    var value: Int { get set }
+    func JSCallNative(_ value: String)
 }
 
 class TestUIWebViewController: UIViewController {
@@ -47,7 +48,7 @@ extension TestUIWebViewController: UIWebViewDelegate {
         let result = webView.stringByEvaluatingJavaScript(from: js)
         print(result ?? "")
         
-        // -----------⬆︎Old Way---⬇︎New Way----------
+        // -----------⬆︎Old Way-----⬇︎New Way----------
         
         // JS Context in JavaScriptCore framework
         jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.jsvaScriptContext") as? JSContext
@@ -71,7 +72,16 @@ extension TestUIWebViewController: UIWebViewDelegate {
 }
 
 extension TestUIWebViewController: TestJSExports {
-    func JSCallNative() {
+    var value: Int {
+        get {
+            return 1
+        }
+        set {
+            
+        }
+    }
+    
+    func JSCallNative(_ value: String) {
         
     }
 }
