@@ -13,7 +13,8 @@
 		1F37E0B1219D56A800BA64D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F37E0AF219D56A800BA64D9 /* Main.storyboard */; };
 		1F37E0B3219D56AA00BA64D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F37E0B2219D56AA00BA64D9 /* Assets.xcassets */; };
 		1F37E0B6219D56AA00BA64D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F37E0B4219D56AA00BA64D9 /* LaunchScreen.storyboard */; };
-		1F37E0BE219D742A00BA64D9 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F37E0BD219D742A00BA64D9 /* index.html */; };
+		1F37E0BE219D742A00BA64D9 /* uiwebview.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F37E0BD219D742A00BA64D9 /* uiwebview.html */; };
+		1F89CCD321A3F20800791377 /* wkwebview.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F89CCD221A3F20800791377 /* wkwebview.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		1F37E0B2219D56AA00BA64D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F37E0B5219D56AA00BA64D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F37E0B7219D56AA00BA64D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F37E0BD219D742A00BA64D9 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		1F37E0BD219D742A00BA64D9 /* uiwebview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = uiwebview.html; sourceTree = "<group>"; };
+		1F89CCD221A3F20800791377 /* wkwebview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = wkwebview.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,8 @@
 				1F37E0B2219D56AA00BA64D9 /* Assets.xcassets */,
 				1F37E0B4219D56AA00BA64D9 /* LaunchScreen.storyboard */,
 				1F37E0B7219D56AA00BA64D9 /* Info.plist */,
-				1F37E0BD219D742A00BA64D9 /* index.html */,
+				1F37E0BD219D742A00BA64D9 /* uiwebview.html */,
+				1F89CCD221A3F20800791377 /* wkwebview.html */,
 			);
 			path = "Native&H5Interaction";
 			sourceTree = "<group>";
@@ -129,8 +132,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F37E0B6219D56AA00BA64D9 /* LaunchScreen.storyboard in Resources */,
-				1F37E0BE219D742A00BA64D9 /* index.html in Resources */,
+				1F37E0BE219D742A00BA64D9 /* uiwebview.html in Resources */,
 				1F37E0B3219D56AA00BA64D9 /* Assets.xcassets in Resources */,
+				1F89CCD321A3F20800791377 /* wkwebview.html in Resources */,
 				1F37E0B1219D56A800BA64D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,20 @@
+<html>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <head>
+        <title>WKWebView</title>
+        <style>
+            button {
+                height: 150px;
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 40px !important;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <form>
+        <button class="btn btn-block btn-primary" onclick="window.webkit.messageHandlers.JSCallNative.postMessage('Message from JS')">ALOHA</button>
+        <button class="btn btn-block btn-primary" onclick="window.webkit.messageHandlers.NativeFunctionForJS.postMessage([1, 9, 8, 4])">BYE</button>
+        </form>
+    </body>
+</html>

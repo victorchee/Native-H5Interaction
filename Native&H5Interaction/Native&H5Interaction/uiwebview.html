@@ -1,0 +1,25 @@
+<html>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <head>
+        <title>UIWebView</title>
+        <script type="text/javascript">
+            function nativeCallJS(text) {
+                alert(text)
+            }
+        </script>
+        <style>
+            button {
+                height: 50px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <form>
+        <button class="btn btn-block btn-primary" onclick="window.location='oldway://path?parameter=1';">Old Way</button>
+        <button class="btn btn-block btn-primary" onclick="alert(native.valueFromNative);">Value From Native</button>
+        <button class="btn btn-block btn-primary" onclick="native.JSCallNative('Message from JS');">Function From Native</button>
+        <button class="btn btn-block btn-primary" onclick="log('Log from JS');">Log from Native</button>
+        </form>
+    </body>
+</html>

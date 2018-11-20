@@ -17,9 +17,11 @@ class TestWKWebViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let userContent = WKUserContentController()
         userContent.add(self, name: "JSCallNative")
+        userContent.add(self, name: "NativeFunctionForJS")
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = userContent
         webview = WKWebView(frame: CGRect.zero, configuration: configuration)
+        webview.backgroundColor = UIColor.white
         view.addSubview(webview)
         webview.translatesAutoresizingMaskIntoConstraints = false
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[webview]|", options: .alignAllCenterX, metrics: nil, views: ["webview": webview]))
@@ -28,7 +30,7 @@ class TestWKWebViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let url = Bundle.main.url(forResource: "index", withExtension: "html") else { return }
+        guard let url = Bundle.main.url(forResource: "wkwebview", withExtension: "html") else { return }
         webview.load(URLRequest(url: url))
     }
 }
@@ -47,6 +49,9 @@ extension TestWKWebViewController: WKScriptMessageHandler {
         if message.name == "JSCallNative" {
             // Support Type: NSNumber，String，Date，Array，Dictionary，NSNull
             guard let body = message.body as? String else { return }
+            print(body)
+        } else if message.name == "NativeFunctionForJS" {
+            guard let body = message.body as? [Int] else { return }
             print(body)
         }
     }

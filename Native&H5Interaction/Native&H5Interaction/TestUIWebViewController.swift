@@ -23,6 +23,7 @@ class TestUIWebViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         webview = UIWebView()
+        webview.backgroundColor = UIColor.white
         webview.delegate = self
         view.addSubview(webview)
         webview.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +33,7 @@ class TestUIWebViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let url = Bundle.main.url(forResource: "index", withExtension: "html") else { return }
+        guard let url = Bundle.main.url(forResource: "uiwebview", withExtension: "html") else { return }
         webview.loadRequest(URLRequest(url: url))
     }
 }
