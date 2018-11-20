@@ -8,8 +8,9 @@
         </script>
     </head>
     <body>
-        <button onclick="JSCallNative(1);">alert</button>
-        <button onclick="native.JSCallNative(2);">native</button>
-        <button onclick="log('log from html');">log</button>
+        <button onclick="window.location='oldway://path?parameter=1';">Old Way</button>
+        <button onclick="alert(native.valueFromNative);">Value From Native</button>
+        <button onclick="native.JSCallNative('Message from JS');">Function From Native</button>
+        <button onclick="log('Log from JS');">Log from Native</button>
     </body>
 </html>
