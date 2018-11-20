@@ -38,8 +38,8 @@ class TestWKWebViewController: UIViewController {
 extension TestWKWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let js = "nativeCallJS(123);"
-        webView.evaluateJavaScript(js) { (script, error) in
-            print(error ?? script ?? "")
+        webView.evaluateJavaScript(js) { (result, error) in
+            print(result ?? error ?? "")
         }
     }
 }

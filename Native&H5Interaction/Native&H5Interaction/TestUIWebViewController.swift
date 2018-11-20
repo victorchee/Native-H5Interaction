@@ -69,7 +69,7 @@ extension TestUIWebViewController: UIWebViewDelegate {
         // Call native from JS
         // 1. JSExport
         jsContext?.setObject(self, forKeyedSubscript: "native" as NSCopying & NSObjectProtocol)
-        // 1. Block
+        // 2. Block
         let log: @convention(block) (String) -> Void = { input in
             print(input)
 //            let arguments = JSContext.currentArguments()
